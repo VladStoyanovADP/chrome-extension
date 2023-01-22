@@ -10,16 +10,14 @@
 		"128": "icon-128.png"
 	},
 
-	"options_page": "options.html",
-
 	"background": {
 		"scripts": ["background.js"]
 	},
-	
+
 	"content_scripts": [
 		{
 			"matches": ["*://*.rumble.com/*"],
-			"js": ["page.js"],
+			"js": ["./node_modules/html2canvas/dist/html2canvas.min.js", "page.js"],
 			"css": ["style.css"],
 			"run_at": "document_end"
 		}
